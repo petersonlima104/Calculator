@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+          <h1 class="text-center mb-4">Calculadora</h1>
+          <div class="calculator-container">
+            <input
+              type="text"
+              id="result"
+              class="form-control mb-3"
+              onkeydown="handleKeyDown(event)"
+              readonly
+            />
+            <div class="row">
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('7')"
+                >
+                  7
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('8')"
+                >
+                  8
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('9')"
+                >
+                  9
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-warning btn-block"
+                  onclick="appendCharacter('+')"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('4')"
+                >
+                  4
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('5')"
+                >
+                  5
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('6')"
+                >
+                  6
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-warning btn-block"
+                  onclick="appendCharacter('-')"
+                >
+                  -
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('1')"
+                >
+                  1
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('2')"
+                >
+                  2
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('3')"
+                >
+                  3
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-warning btn-block"
+                  onclick="appendCharacter('*')"
+                >
+                  *
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('0')"
+                >
+                  0
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="appendCharacter('.')"
+                >
+                  .
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button class="btn btn-success btn-block" onclick="calculate()">
+                  =
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-warning btn-block"
+                  onclick="appendCharacter('/')"
+                >
+                  /
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-info btn-block btn-red"
+                  onclick="clearResult()"
+                >
+                  C
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-primary btn-block"
+                  onclick="togglePositiveNegative()"
+                >
+                  +/-
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button
+                  class="btn btn-dark btn-block"
+                  onclick="deleteCharacter()"
+                >
+                  &#9003;
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <!-- Empty column -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
